@@ -1,0 +1,45 @@
+name: Request access
+description: Ask for the Choir Lyrics app and song library
+title: "Access request: "
+labels: ["access request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest. This page is public, so please do not include phone numbers or other private details.
+  - type: input
+    id: name
+    attributes:
+      label: Your name
+    validations:
+      required: true
+  - type: input
+    id: github
+    attributes:
+      label: Your GitHub username
+      description: Needed so you can be added to the private repository.
+    validations:
+      required: true
+  - type: input
+    id: church
+    attributes:
+      label: Church / fellowship / group
+    validations:
+      required: true
+  - type: dropdown
+    id: use
+    attributes:
+      label: How will you use the app?
+      multiple: true
+      options:
+        - Projector in church
+        - LED screen
+        - OBS / livestream
+        - Choir rehearsals
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
